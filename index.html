@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="hi">
   <head><title>My Order </title>
-  
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="my-orders.css">
 
@@ -12,7 +14,7 @@
       padding: 0;
     }
     
-      ul {
+          ul {
   background-color: pink;
   display: flex;      
   justify-content: center;     
@@ -35,7 +37,8 @@ ul li {
   padding: 8px ;
   font-size: 16px;
   border-radius: 10px;
-
+height: 25px;
+line-height: 25px;
   display: inline-block;
 }
 ul li:active{
@@ -48,10 +51,19 @@ li:hover{
   color: black;
   border:2px solid black;
 }
+
+
+/* छोटे स्क्रीन पर responsive font size */
+@media (max-width: 600px) {
+  ul li {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
 #upload{
   text-align: center;
   background-color: #58fdf5 ;
-  font-size: 28px;
+  font-size: 30px;
   margin-block: 5px;
   padding: 5px;
   position: sticky;
@@ -61,6 +73,11 @@ border-radius: 10px;
 box-shadow: 0px 5px 0px white;
 border: 2px solid black;
 }
+#upload:hover{
+  background-color: gray;
+  color: white;
+}
+  
     
   .no{
   color:gray;
@@ -280,4 +297,4 @@ orders.forEach((order, index) => {
   renderOrders();
 </script>
    </body>
-  </html>
+</html>
